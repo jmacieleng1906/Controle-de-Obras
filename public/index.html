@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Controle de Obras</title>
+<link rel="icon" href="/logo-icon.png">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div id="login-screen" class="screen">
+  <img src="/logo.png" alt="Abrelar" class="login-logo">
+  <div class="login-card">
+    <h1>Controle de Obras</h1>
+    <p class="subtitle">Materiais, fornecedores e orçamento</p>
+    <form id="login-form">
+      <label>Usuário</label>
+      <input type="text" id="login-usuario" autocomplete="username" required>
+      <label>Senha</label>
+      <input type="password" id="login-senha" autocomplete="current-password" required>
+      <div id="login-erro" class="erro" hidden></div>
+      <button type="submit">Entrar</button>
+    </form>
+  </div>
+</div>
+
+<div id="app-screen" class="screen" hidden>
+  <header class="topbar">
+    <div class="topbar-title"><img src="/logo-icon.png" alt="" class="topbar-logo">Controle de Obras</div>
+    <div class="topbar-user">
+      <span id="user-nome"></span>
+      <button id="btn-logout" class="link-btn">Sair</button>
+    </div>
+  </header>
+
+  <main id="view" class="view"></main>
+
+  <nav class="bottomnav">
+    <button class="nav-btn" data-view="dashboard">
+      <span class="nav-icon">🏠</span><span>Painel</span>
+    </button>
+    <button class="nav-btn" data-view="fornecedores">
+      <span class="nav-icon">🚚</span><span>Fornecedores</span>
+    </button>
+    <button class="nav-btn nav-btn-primary" data-view="nova-compra">
+      <span class="nav-icon">➕</span><span>Lançar</span>
+    </button>
+    <button class="nav-btn" data-view="casas">
+      <span class="nav-icon">🏗️</span><span>Casas</span>
+    </button>
+    <button class="nav-btn" data-view="usuarios" id="nav-usuarios" hidden>
+      <span class="nav-icon">👥</span><span>Equipe</span>
+    </button>
+  </nav>
+</div>
+
+<div id="toast" class="toast" hidden></div>
+
+<script src="/app.js"></script>
+</body>
+</html>
